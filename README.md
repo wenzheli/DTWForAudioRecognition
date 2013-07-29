@@ -1,6 +1,9 @@
 Dynamic Time Warpping for Audio Recognition. (JAVA implementation)
 ======================
 
+The code is for one of my papers:  
+    http://www.aaai.org/ocs/index.php/AAAI/AAAI11/paper/view/3791
+
 Features include:
   - calculate the distance between two feature vectors for 1D
   - calculate the distance between two feature vectors for 2D
