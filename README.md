@@ -22,7 +22,22 @@ By using DTW, we can easily calculate the minimum distance between two MFCCs fea
 
 Example Code:
 
+<b> Get the feature vector from audio files <b>
 ```java
-  int aaa =1;
+   // feature extraction. The code does not include library for audio feature extraction, 
+   // you need to do it by yourself. 
+   double[][] features1 = getMFCCFeature(audio1);
+   double[][] features2 = getMFCCFeature(audio2);
+```
+
+<b> Calculate the distance between two audio files using DTW <b>
+```java
+  // initialize dyanamic time warpping object. The variance represents the variance for each dimension.
+  // the purpose is to normalize each dimension when we do euclidean calculation, since the scale
+  // of each dimension may quite different. 
+  DynamicTimeWrapping2D dtw = new DynamicTimeWrapping(features1, features2, variance);
+  
+  // calculate the distance
+  double distance = dtw.calDistance();
 ```
 
